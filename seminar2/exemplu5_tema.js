@@ -1,5 +1,5 @@
 const fibonacci = (n) => {
-  if (n <= 0) return null; // Ordin invalid
+  if (n <= 0) return null; 
   if (n === 1) return 0;
   if (n === 2) return 1;
 
@@ -18,7 +18,7 @@ const fibonacci = (n) => {
 
 if (process.argv.length <= 2) {
   console.log(
-    "Not enough parameters. Please provide the Fibonacci order as an argument."
+    "Not enough parameters"
   );
 } else {
   const n = parseInt(process.argv[2]);
