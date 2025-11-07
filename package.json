@@ -4,6 +4,19 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node seminar5/index.js"
+=======
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Ives van Hoorne",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "nodemon": "^3.1.5"
+  },
+  "dependencies": {
+    "rimraf": "^6.1.0"
+>>>>>>> 4595060 (Prima versiune funcțională: creează fișier și șterge director)
   }
 }
