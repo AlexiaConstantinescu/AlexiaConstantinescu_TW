@@ -1,0 +1,29 @@
+<html lang="en">
+<head></head>
+<body>
+
+    <div>
+        <form>
+            <input id="inputName" type="text" placeholder="Name">
+            <br /><br />
+            <input id="inputAge" type="number" placeholder="Age">
+            <br /><br />
+            <input value="Submit" onclick="sendData()" type="button">
+            <br /><br />
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <input id="inputId" type="number" placeholder="Enter ID">
+            <input value="Get by ID" onclick="getById()" type="button">
+        </form>
+        <div id="resultById"></div>
+    </div>
+
+    <div id="tableData"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</html>
