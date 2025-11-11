@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <script>
+        window.onload = () => {
+            const form = document.getElementById('form');
+            const tableBody = document.getElementById('contactsBody');
+
+            const formSubmitHandler = (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+
+                if(name && phone){
+                    const row = document.createElement('tr');
+                    const nameCell = document.createElement('td');
+                    const phoneCell = document.createElement('td');
+
+                    nameCell.textContent = name;
+                    phoneCell.textContent = phone;
+
+                    row.appendChild(nameCell);
+                    row.appendChild(phoneCell);
+                    tableBody.appendChild(row);
+
+                    form.reset();
+                }
+            };
+
+            form.onsubmit = formSubmitHandler;
+        };
+    </script>
+</head>
+<body>
+    <h1>Agenda Contacte</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody id="contactsBody">
+        </tbody>
+    </table>
+
+    <h2>Adaugă Contact</h2>
+    <form id="form">
+        <input type="text" id="name" placeholder="Nume" required />
+        <input type="text" id="phone" placeholder="Telefon" required />
+        <button type="submit">Adaugă</button>
+    </form>
+</body>
+</html>
