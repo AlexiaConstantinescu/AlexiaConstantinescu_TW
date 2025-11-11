@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Event Example</title>
+    <script>
+        window.onload = () => {
+            const button = document.getElementById('myBtn');
+            const customEvent = new Event('buttonClicked');
+            const customEventHandler = () => {
+                console.log('Evenimentul custom a fost declanșat!');
+            };
+            const clickHandler = () => {
+                console.log('Butonul a fost apăsat.');
+                document.dispatchEvent(customEvent);
+            };
+            button.addEventListener('click', clickHandler);
+            document.addEventListener('buttonClicked', customEventHandler);
+        };
+    </script>
+</head>
+<body>
+    <button id="myBtn">Click me!</button>
+</body>
+</html>
