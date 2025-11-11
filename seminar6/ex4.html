@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        .board {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            font-size: 48px;
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div class="cell">X</div>
+        <div class="cell">O</div>
+        <div class="cell">X</div>
+        <div class="cell">O</div>
+        <div class="cell">X</div>
+        <div class="cell">O</div>
+        <div class="cell">X</div>
+        <div class="cell">O</div>
+        <div class="cell">X</div>
+    </div>
+</body>
+</html>
