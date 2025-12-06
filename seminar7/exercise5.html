@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .ui {
+            height: 100vh;
+        }
+
+        .menu {
+            height: 5vh;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            background-color: tomato;
+        }
+
+        .menu-item {
+            min-width: 200px;
+            border: 1px dashed gold;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .burger-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 400px) {
+            .menu {
+                display: none;
+            }
+
+            .burger-menu {
+                display: block;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                height: 3em;
+                width: 3em;
+                border-radius: 50%;
+                background-color: lightgray;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui">
+        <div class="menu">
+            <div class="menu-item">first</div>
+            <div class="menu-item">second</div>
+            <div class="menu-item">third</div>
+            <div class="menu-item">fourth</div>
+        </div>
+        <div class="burger-menu">X</div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequuntur dignissimos voluptatibus
+            ipsam et autem amet, molestiae ut facilis adipisci.
+        </div>
+    </div>
+</body>
+
+</html>
