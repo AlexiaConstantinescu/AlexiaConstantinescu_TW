@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Table (CSS Grid)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 40px;
+            background-color: #5d5d5d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wrapper-inner {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            gap: 0;
+        }
+
+        .box-inner {
+            width: 60px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            grid-template-rows: repeat(8, 60px);
+            border: 4px solid #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .tile {
+            width: 60px;
+            height: 60px;
+        }
+
+        .tile:nth-child(odd) {
+            background-color: #f0d9b5;
+        }
+
+        .tile:nth-child(even) {
+            background-color: #b58863;
+        }
+
+        .chessboard div:nth-child(8n + 1)~.chessboard div:nth-child(8n + 8) {
+            background-color: #b58863;
+        }
+
+        .tile:hover {
+            outline: 3px solid yellow;
+            cursor: pointer;
+        }
+
+        .bottom .wrapper-inner {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="wrapper-inner">
+                <div class="box-inner">A</div>
+                <div class="box-inner">B</div>
+                <div class="box-inner">C</div>
+                <div class="box-inner">D</div>
+                <div class="box-inner">E</div>
+                <div class="box-inner">F</div>
+                <div class="box-inner">G</div>
+                <div class="box-inner">H</div>
+            </div>
+        </div>
+        <div class="chessboard">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper-inner">
+                <div class="box-inner">A</div>
+                <div class="box-inner">B</div>
+                <div class="box-inner">C</div>
+                <div class="box-inner">D</div>
+                <div class="box-inner">E</div>
+                <div class="box-inner">F</div>
+                <div class="box-inner">G</div>
+                <div class="box-inner">H</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
